@@ -10,8 +10,6 @@
           id="quality"
           v-model="value"
           :min="0"
-          :quota="getQuota"
-          :step="1"
           :user-id="id"
           type="range"
           @input="changeEnergy"
@@ -70,11 +68,6 @@ export default {
     return {
       value: 0,
     }
-  },
-  computed: {
-    getQuota() {
-      return this.rating * 25
-    },
   },
   watch: {
     energy: {
